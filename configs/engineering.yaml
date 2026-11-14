@@ -1,0 +1,13 @@
+# Table 8 (ECO and EDECO columns) and Fig. 8: ten constrained engineering design problems.
+# Protocol of Section 4.4: Fes_max = 5000 * D, 30 independent runs, penalty function method.
+# The paper gives neither the problem formulations nor the penalty coefficient; the
+# standard formulations of the literature are used (see docs/implementation_notes.md).
+name: engineering
+suite: engineering
+functions: all
+algorithms: [ECO, EECO, DECO, EDECO]
+pop_size: 100
+fes_per_dim: 5000
+runs: 30
+seed: 2025
+workers: 4

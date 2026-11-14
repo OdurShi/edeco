@@ -1,0 +1,308 @@
+{
+  "description": "Constrained engineering design problems RW01-RW10 (Table 7 of the paper)",
+  "constraint_handling": {
+    "method": "static quadratic penalty f(x) + rho * sum(max(0, g_i(x))^2)",
+    "rho": 1000000000000.0,
+    "equality_tolerance": 0.0001,
+    "feasibility_tolerance": 1e-06
+  },
+  "problems": [
+    {
+      "key": "RW01",
+      "name": "Tension/compression spring design",
+      "dimension": 3,
+      "lower_bounds": [
+        0.05,
+        0.25,
+        2.0
+      ],
+      "upper_bounds": [
+        2.0,
+        1.3,
+        15.0
+      ],
+      "n_constraints": 4,
+      "discrete_variables": "none",
+      "reference_solution": [
+        0.0516890452,
+        0.3567173575,
+        11.2889881864
+      ],
+      "reference_objective": 0.012665233,
+      "source": "Arora (1989); formulation as in Coello & Mezura-Montes (2002), Adv. Eng. Inform. 16, 193-203; best-known value, solution re-derived with SciPy SLSQP"
+    },
+    {
+      "key": "RW02",
+      "name": "Pressure vessel design (continuous variables)",
+      "dimension": 4,
+      "lower_bounds": [
+        0.0,
+        0.0,
+        10.0,
+        10.0
+      ],
+      "upper_bounds": [
+        99.0,
+        99.0,
+        200.0,
+        200.0
+      ],
+      "n_constraints": 4,
+      "discrete_variables": "none",
+      "reference_solution": [
+        0.7781686414,
+        0.3846491626,
+        40.3196187241,
+        200.0
+      ],
+      "reference_objective": 5885.3327736,
+      "source": "Sandgren (1990); continuous variant as in Kumar et al. (2020), Swarm Evol. Comput. 56, 100693"
+    },
+    {
+      "key": "RW03",
+      "name": "Three-bar truss design",
+      "dimension": 2,
+      "lower_bounds": [
+        0.0,
+        0.0
+      ],
+      "upper_bounds": [
+        1.0,
+        1.0
+      ],
+      "n_constraints": 3,
+      "discrete_variables": "none",
+      "reference_solution": [
+        0.788675135,
+        0.40824829
+      ],
+      "reference_objective": 263.895843,
+      "source": "Ray & Saini (2001), Eng. Optim. 33, 735-748"
+    },
+    {
+      "key": "RW04",
+      "name": "Welded beam design",
+      "dimension": 4,
+      "lower_bounds": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "upper_bounds": [
+        2.0,
+        10.0,
+        10.0,
+        2.0
+      ],
+      "n_constraints": 7,
+      "discrete_variables": "none",
+      "reference_solution": [
+        0.20572964,
+        3.470488666,
+        9.03662391,
+        0.20572964
+      ],
+      "reference_objective": 1.724852309,
+      "source": "Ragsdell & Phillips (1976); Coello (2000), Comput. Ind. 41, 113-127"
+    },
+    {
+      "key": "RW05",
+      "name": "Speed reducer design",
+      "dimension": 7,
+      "lower_bounds": [
+        2.6,
+        0.7,
+        17.0,
+        7.3,
+        7.3,
+        2.9,
+        5.0
+      ],
+      "upper_bounds": [
+        3.6,
+        0.8,
+        28.0,
+        8.3,
+        8.3,
+        3.9,
+        5.5
+      ],
+      "n_constraints": 11,
+      "discrete_variables": "x3 (number of pinion teeth) is rounded to an integer",
+      "reference_solution": [
+        3.5,
+        0.7,
+        17.0,
+        7.3,
+        7.715319911,
+        3.350214666,
+        5.286654465
+      ],
+      "reference_objective": 2994.471066,
+      "source": "Golinski (1973); Mezura-Montes & Coello (2005), MICAI, LNAI 3789, 652-662"
+    },
+    {
+      "key": "RW06",
+      "name": "Gear train design",
+      "dimension": 4,
+      "lower_bounds": [
+        12.0,
+        12.0,
+        12.0,
+        12.0
+      ],
+      "upper_bounds": [
+        60.0,
+        60.0,
+        60.0,
+        60.0
+      ],
+      "n_constraints": 0,
+      "discrete_variables": "all four teeth numbers are rounded to integers",
+      "reference_solution": [
+        49.0,
+        16.0,
+        19.0,
+        43.0
+      ],
+      "reference_objective": 2.700857e-12,
+      "source": "Sandgren (1990), J. Mech. Des. 112, 223-229"
+    },
+    {
+      "key": "RW07",
+      "name": "Rolling element bearing design",
+      "dimension": 10,
+      "lower_bounds": [
+        125.0,
+        10.5,
+        4.0,
+        0.515,
+        0.515,
+        0.4,
+        0.6,
+        0.3,
+        0.02,
+        0.6
+      ],
+      "upper_bounds": [
+        150.0,
+        31.5,
+        50.0,
+        0.6,
+        0.6,
+        0.5,
+        0.7,
+        0.4,
+        0.1,
+        0.85
+      ],
+      "n_constraints": 9,
+      "discrete_variables": "x3 (number of balls) is rounded to an integer",
+      "reference_solution": [
+        125.7190556,
+        21.42559,
+        11.0,
+        0.515,
+        0.515,
+        0.4242,
+        0.6339,
+        0.3,
+        0.0689,
+        0.7995
+      ],
+      "reference_objective": -81859.74,
+      "source": "Gupta, Tiwari & Nair (2007), Mech. Mach. Theory 42, 1418-1443; solution of Rao, Savsani & Vakharia (2011), Comput.-Aided Des. 43, 303-315"
+    },
+    {
+      "key": "RW08",
+      "name": "Cantilever beam design",
+      "dimension": 5,
+      "lower_bounds": [
+        0.01,
+        0.01,
+        0.01,
+        0.01,
+        0.01
+      ],
+      "upper_bounds": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ],
+      "n_constraints": 1,
+      "discrete_variables": "none",
+      "reference_solution": [
+        6.01601597,
+        5.30917393,
+        4.4943296,
+        3.50147496,
+        2.15266533
+      ],
+      "reference_objective": 1.339956,
+      "source": "Chickermane & Gea (1996), Int. J. Numer. Methods Eng. 39, 829-846"
+    },
+    {
+      "key": "RW09",
+      "name": "Multiple disk clutch brake design",
+      "dimension": 5,
+      "lower_bounds": [
+        60.0,
+        90.0,
+        1.0,
+        600.0,
+        2.0
+      ],
+      "upper_bounds": [
+        80.0,
+        110.0,
+        3.0,
+        1000.0,
+        9.0
+      ],
+      "n_constraints": 8,
+      "discrete_variables": "r_i and r_o are integers, t is a multiple of 0.5, F a multiple of 10, Z an integer",
+      "reference_solution": [
+        70.0,
+        90.0,
+        1.0,
+        1000.0,
+        3.0
+      ],
+      "reference_objective": 0.313656611,
+      "source": "Osyczka (2002); Deb & Srinivasan (2006), GECCO, 1629-1636"
+    },
+    {
+      "key": "RW10",
+      "name": "Step-cone pulley design",
+      "dimension": 5,
+      "lower_bounds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upper_bounds": [
+        60.0,
+        60.0,
+        90.0,
+        90.0,
+        90.0
+      ],
+      "n_constraints": 11,
+      "discrete_variables": "none",
+      "reference_solution": [
+        38.393739977,
+        52.802944687,
+        70.398449827,
+        84.495716069,
+        90.0
+      ],
+      "reference_objective": 16.069868725,
+      "source": "Rao (2009); best-known value of Kumar et al. (2020), Swarm Evol. Comput. 56, 100693 (solution vector re-derived with SciPy SLSQP for this repository)"
+    }
+  ]
+}

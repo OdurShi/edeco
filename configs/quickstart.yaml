@@ -1,0 +1,11 @@
+# Small experiment on built-in functions (no optional dependency needed, about 10 s).
+name: quickstart
+suite: classical
+functions: [shifted_sphere, rosenbrock, shifted_rastrigin, shifted_ackley]
+dim: 10
+algorithms: [ECO, EECO, DECO, EDECO]
+pop_size: 100
+max_fes: 20000
+runs: 5
+seed: 0
+workers: 2

@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the article below."
+title: "EDECO: An Enhanced Educational Competition Optimizer (Python re-implementation)"
+type: software
+license: MIT
+repository-code: "https://github.com/OdurShi/edeco"
+authors:
+  - family-names: Tang
+    given-names: Wenkai
+  - family-names: Shi
+    given-names: Shangqing
+  - family-names: Lu
+    given-names: Zengtong
+  - family-names: Lin
+    given-names: Mengying
+  - family-names: Cheng
+    given-names: Hao
+preferred-citation:
+  type: article
+  title: "EDECO: An Enhanced Educational Competition Optimizer for Numerical Optimization Problems"
+  authors:
+    - family-names: Tang
+      given-names: Wenkai
+    - family-names: Shi
+      given-names: Shangqing
+    - family-names: Lu
+      given-names: Zengtong
+    - family-names: Lin
+      given-names: Mengying
+    - family-names: Cheng
+      given-names: Hao
+  journal: Biomimetics
+  volume: 10
+  issue: 3
+  start: 176
+  year: 2025
+  month: 3
+  doi: 10.3390/biomimetics10030176
+  publisher:
+    name: MDPI

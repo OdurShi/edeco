@@ -1,0 +1,17 @@
+| Algorithm | Friedman mean rank | Overall rank |
+|---|---|---|
+| ECO | 7.0000 | 5 |
+| EDECO | 4.1250 | 2 |
+| ECO-N30 | 11.5000 | 13 |
+| EDECO-N30 | 12.5000 | 14 |
+| ECO-N50 | 10.2500 | 12 |
+| EDECO-N50 | 8.5000 | 9 |
+| ECO-paper-eqs | 8.8750 | 11 |
+| DECO | 7.8750 | 8 |
+| DECO-eq19 | 8.5000 | 9 |
+| EDECO-eq19 | 4.2500 | 3 |
+| EDECO-literal-w | 2.3750 | 1 |
+| EDECO-pairwise | 4.7500 | 4 |
+| EDECO-NE-N | 7.5000 | 7 |
+| EDECO-Nd-0.3N | 7.0000 | 5 |
+| p-value | 3.26E-06 |  |

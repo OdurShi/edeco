@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "edeco"
+version = "1.0.0"
+description = "Python re-implementation of EDECO, an Enhanced Educational Competition Optimizer (Biomimetics 2025, 10, 176)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Wenkai Tang" },
+  { name = "Shangqing Shi" },
+  { name = "Zengtong Lu" },
+  { name = "Mengying Lin" },
+  { name = "Hao Cheng" },
+]
+keywords = [
+  "metaheuristic",
+  "educational competition optimizer",
+  "estimation of distribution algorithm",
+  "fitness-distance balance",
+  "CEC 2017",
+  "engineering optimization",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "pyyaml>=6.0",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+# Only needed to regenerate assets/paper_figures from the article PDF.
+figures = ["pymupdf>=1.24"]
+# Fallback source of the CEC 2017 definition files when data/cec2017 of the repository is
+# not available (e.g. the package was installed without the repository).  opfunu 1.0.x
+# imports pkg_resources, hence setuptools<81.
+cec = ["opfunu>=1.0.1,<1.1", "setuptools<81"]
+
+[project.scripts]
+edeco = "edeco.cli:main"
+
+[project.urls]
+Paper = "https://doi.org/10.3390/biomimetics10030176"
+Repository = "https://github.com/OdurShi/edeco"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/edeco"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning:opfunu"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "SIM", "C4", "RUF"]
+ignore = [
+  "N803", # argument names such as X follow the paper's notation
+  "N806", # variable names such as X follow the paper's notation
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["N802"]

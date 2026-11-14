@@ -1,0 +1,14 @@
+# Tables 3-4 (ablation study) and the ECO / EDECO columns of Table A1:
+# 10-dimensional CEC 2017, 29 functions.
+# Protocol of Section 4.1: Fes_max = 5000 * D, 30 independent runs.
+# pop_size is NOT stated in the paper; see docs/implementation_notes.md.
+name: cec2017_10d
+suite: cec2017
+functions: all
+dim: 10
+algorithms: [ECO, EECO, DECO, EDECO]
+pop_size: 100
+fes_per_dim: 5000
+runs: 30
+seed: 2025
+workers: 4

@@ -1,0 +1,7 @@
+Algorithm,Friedman mean rank,Overall rank
+ECO,3.1000,3
+EECO,1.8500,1
+DECO,3.1500,4
+EDECO,1.9000,2
+p-value,2.35E-02,
+Nemenyi CDV (alpha = 0.05),1.4832,

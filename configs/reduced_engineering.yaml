@@ -1,0 +1,12 @@
+# Reduced-scale run of the engineering study (Table 8) that was executed for this
+# repository: identical to engineering.yaml except for the number of independent runs
+# (10 instead of 30).
+name: reduced_engineering
+suite: engineering
+functions: all
+algorithms: [ECO, EECO, DECO, EDECO]
+pop_size: 100
+fes_per_dim: 5000
+runs: 10
+seed: 2025
+workers: 4

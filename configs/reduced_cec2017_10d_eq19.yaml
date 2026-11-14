@@ -1,0 +1,18 @@
+# Reduced-scale ablation study (Tables 3-4) with Eq. (19) applied exactly as printed to
+# the high-school students (dfs_student_rule: eq19) instead of the default reading.
+# Same functions, seeds, budget and number of runs as reduced_cec2017_10d_eq11.yaml; ECO
+# and EECO do not use DFS and therefore give identical results in both experiments.
+name: reduced_cec2017_10d_eq19
+suite: cec2017
+functions: all
+dim: 10
+pop_size: 100
+fes_per_dim: 5000
+runs: 10
+seed: 2025
+workers: 4
+algorithms:
+  ECO: {}
+  EECO: {}
+  DECO: {dfs_student_rule: eq19}
+  EDECO: {dfs_student_rule: eq19}

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+*.whl
+
+# Environments
+.venv/
+venv/
+.env
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Experiment outputs (the reduced-scale results under results/reduced are versioned)
+results/*
+!results/reduced/
+outputs/
+runs/
+
+# Data: the benchmark definition files under data/ are tracked; local copies of the
+# official text files and MATLAB files are not
+input_data/
+*.mat
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,8 @@
+| Algorithm | Friedman mean rank | Overall rank |
+|---|---|---|
+| ECO | 3.1034 | 4 |
+| EECO | 1.9310 | 1 |
+| DECO | 2.8276 | 3 |
+| EDECO | 2.1379 | 2 |
+| p-value | 1.07E-03 |  |
+| Nemenyi CDV (alpha = 0.05) | 0.8710 |  |

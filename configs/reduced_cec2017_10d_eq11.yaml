@@ -1,0 +1,19 @@
+# Reduced-scale version of cec2017_10d.yaml (ablation study, Tables 3-4): 10 independent
+# runs instead of 30.  The DFS update uses the default reading (dfs_student_rule: eq11:
+# the high-school student rule of Eq. (11) with its leading term replaced by X_DFS); the
+# setting is written out so that the file can be compared with
+# reduced_cec2017_10d_eq19.yaml.
+name: reduced_cec2017_10d_eq11
+suite: cec2017
+functions: all
+dim: 10
+pop_size: 100
+fes_per_dim: 5000
+runs: 10
+seed: 2025
+workers: 4
+algorithms:
+  ECO: {}
+  EECO: {}
+  DECO: {dfs_student_rule: eq11}
+  EDECO: {dfs_student_rule: eq11}
